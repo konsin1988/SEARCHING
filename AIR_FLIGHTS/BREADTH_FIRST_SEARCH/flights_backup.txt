@@ -1,0 +1,12 @@
+11
+New_York Chicago 1000
+Chicago Denver 1000
+New_York Toronto 800
+New_York Denver 1900
+Toronro Calgary 1500
+Toronto Los_Angeles 1800
+Toronto Chicago 500
+Denver Urbana 1000
+Denver Housten 1500
+Housten Los_Angeles 1500
+Denver Los_Angeles 1500
