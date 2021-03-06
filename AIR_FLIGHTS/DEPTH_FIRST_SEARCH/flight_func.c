@@ -126,9 +126,12 @@ void isflight( fl_db_ptr casted_ptr, char* from, char* to )
 		pop(casted_ptr, from, to, &dist);
 		isflight(casted_ptr, from, to);
 	}
+	free(anywhere);
 
 }
-
+/*______________________________________________________*/
+//
+/********** search_in_depth function **********************/
 void search_in_depth_func( search_in_depth_iface_ptr ptr )
 {
 	fl_db_ptr casted_ptr = search_in_depth_to_fl_db( ptr );
@@ -137,9 +140,11 @@ void search_in_depth_func( search_in_depth_iface_ptr ptr )
 	strcpy(from, (*casted_ptr).search_from);
 	strcpy(to, (*casted_ptr).search_to);
 	isflight( casted_ptr, from, to );
-
-
-
+	print_result_func( fl_db_to_print_result(casted_ptr) );
+	free(from);
+	free(to);
+	free((*casted_ptr).fl_list);
+	free((*casted_ptr).fl_stack);
 }
 /*________________________________________________*/
 //
@@ -162,6 +167,7 @@ void print_result_func( print_result_iface_ptr ptr )
 	}
 	printf("\nFrom %s to %s summ distance = %d.\n", 
 	(*casted_ptr).search_from, (*casted_ptr).search_to, distance );
+
 }
 /*__________________________________________________*/
 

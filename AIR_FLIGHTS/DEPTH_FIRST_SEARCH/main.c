@@ -25,15 +25,6 @@ int main(int argc, char** argv)
 		
 		flight_data.search_in_depth( 
 			fl_db_to_search_in_depth( &flight_data ));
-		/*for( size_t i=0; i<flight_data.fl_list_num; ++i )
-		{
-			printf("%s ", flight_data.fl_list[i].from );
-			printf("%s ", flight_data.fl_list[i].to );
-			printf("%d\n", flight_data.fl_list[i].distance );
-		}*/
-		flight_data.print_result( 
-			fl_db_to_print_result( &flight_data ));
-			
 	}
 	return 0;
 }

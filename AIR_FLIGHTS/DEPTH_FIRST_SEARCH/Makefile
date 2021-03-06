@@ -1,4 +1,4 @@
-obj=flight_func.o std.o in_param.o print_help.o db_struct.o type_casting_func.o
+obj=flight_func.o std.o in_param.o print_help.o db_struct.o type_casting_func.o my_getch.o
 search_in_depth: main.c $(obj)
 	gcc $^ -o $@ -lm
 

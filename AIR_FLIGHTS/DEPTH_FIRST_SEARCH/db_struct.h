@@ -86,6 +86,7 @@ fl_db_ptr print_result_to_fl_db( print_result_iface_ptr );
 /********************* In_param **************************/
 int in_param( int argc, char** argv, char** cities );
 void print_help( char** argv );
+int my_getch();
 /*______________________________________________________*/
 //
 /**************** flight_data_functions ****************/
